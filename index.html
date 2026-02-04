@@ -1,221 +1,112 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paulo Salomão | CEO & Founder IArtium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700;900&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <title>Paulo Salomão | Software Architect & CEO IArtium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root {
-            --verde-hps: #026304;
-            --perola: #F0F4F2;
-            --ouro: #D4AF37;
-            --graffite: #2D3436;
-        }
-
-        body {
-            background-color: var(--perola);
-            color: var(--graffite);
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        h1, h2, h3, .serif {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* Efeito de filete dourado animado para a Logo/Foto */
+        :root { --verde: #026304; --perola: #F0F4F2; --gold: #D4AF37; --graphite: #2D3436; }
+        body { background-color: var(--perola); color: var(--graphite); font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
         .gold-border-anim {
-            position: relative;
-            padding: 5px;
-            background: linear-gradient(90deg, var(--ouro), #fff, var(--ouro));
-            background-size: 200% 100%;
-            animation: goldFlow 3s linear infinite;
-            border-radius: 8px;
+            position: relative; padding: 4px; border-radius: 8px;
+            background: linear-gradient(90deg, var(--gold), #fff, var(--gold));
+            background-size: 200% 100%; animation: goldFlow 3s linear infinite;
         }
-
-        @keyframes goldFlow {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-
-        .section-bg-png {
-            background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
-            background-attachment: fixed;
-        }
-
-        .nav-link {
-            transition: all 0.3s;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            font-weight: 600;
-        }
-
-        .nav-link:hover {
-            color: var(--ouro);
-        }
-
-        .btn-whatsapp {
-            background-color: #25D366;
-            transition: transform 0.3s;
-        }
-
-        .btn-whatsapp:hover {
-            transform: scale(1.1);
-        }
-
-        .border-gold { border-color: var(--ouro); }
-        .text-verde { color: var(--verde-hps); }
+        @keyframes goldFlow { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gold/30">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gold/30">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <img src="logo.png" alt="Logo" class="h-10">
-            <div class="hidden md:flex space-x-6">
-                <a href="#inicio" class="nav-link">Início</a>
-                <a href="#software" class="nav-link">Software</a>
-                <a href="#apps" class="nav-link">Apps</a>
-                <a href="#historia" class="nav-link">História</a>
-                <a href="#esg" class="nav-link">ESG</a>
-                <a href="#contato" class="nav-link">Contato</a>
+            <span class="text-verde font-bold tracking-tighter serif text-xl">IARTIUM</span>
+            <div class="hidden md:flex space-x-8 text-[10px] font-bold tracking-[0.2em] uppercase">
+                <a href="#about" class="hover:text-gold transition">About</a>
+                <a href="#architecture" class="hover:text-gold transition">Architecture</a>
+                <a href="#sovereignty" class="hover:text-gold transition">Sovereignty</a>
+                <a href="#contact" class="hover:text-gold transition">Contact</a>
             </div>
-            <a href="https://wa.me/5564992962999" class="btn-whatsapp text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg">WhatsApp Classic</a>
+            <a href="https://wa.me/5564992962999" class="bg-[#25D366] text-white px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">WhatsApp Classic</a>
         </div>
     </nav>
 
-    <section id="inicio" class="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden pt-20">
-        <div class="absolute inset-0 z-0 opacity-20">
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover" alt="Background">
-        </div>
-        <div class="relative z-10 max-w-4xl">
-            <h1 class="text-5xl md:text-7xl mb-6 text-verde">Paulo Salomão</h1>
-            <p class="text-xl md:text-2xl italic serif text-gray-600 mb-8">
-                "O mais importante é a imaginação..." <br>
-                <span class="text-sm font-sans">— Albert Einstein</span>
+    <section class="h-screen flex items-center justify-center text-center px-6 pt-20">
+        <div class="max-w-4xl">
+            <h1 class="text-6xl md:text-8xl mb-8 text-verde">Paulo Salomão</h1>
+            <p class="text-xl md:text-2xl italic serif text-gray-500 mb-10">
+                "Imagination is more important than knowledge..." <br>
+                <span class="text-sm font-sans not-italic">— Albert Einstein</span>
             </p>
-            <div class="w-24 h-1 bg-ouro mx-auto"></div>
+            <div class="w-32 h-[2px] bg-gold mx-auto"></div>
         </div>
     </section>
 
-    <section class="py-20 bg-white px-6">
+    <section id="about" class="py-24 bg-white px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl mb-8 text-verde">Sua ideia, nossa execução imediata.</h2>
-            <p class="text-lg leading-relaxed text-gray-700">
-                Se você tem uma ideia, quer fazer seu site, sua apresentação, seu currículo, criar seu negócio, um aplicativo, e ter tudo isso organizado na web, simplesmente entre em contato com nossa equipe da <strong>IARTIUM</strong>, e com certeza vamos trazer para você solução imediata e eficiente.
+            <h2 class="text-4xl mb-10 text-verde">High-Performance Engineering</h2>
+            <p class="text-lg leading-relaxed text-gray-600">
+                If you have a vision, a business to build, or a complex system to scale, <strong>IARTIUM</strong> provides immediate, world-class solutions. We specialize in transforming bold ideas into sovereign digital infrastructures.
             </p>
         </div>
     </section>
 
-    <section class="py-20 section-bg-png bg-[#E8EEEA] px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section id="architecture" class="py-24 bg-[#E8EEEA] px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <h2 class="text-4xl mb-6 text-verde">A Arte da Engenharia</h2>
-                <div class="space-y-6 text-gray-700">
-                    <p><strong>Criador & Designer:</strong> A estética não é apenas visual, é funcionalidade em estado puro. Assim como na arte plástica, um design de interface deve guiar a alma do usuário.</p>
-                    <p><strong>Arquiteto de Sistemas:</strong> Construir softwares é como erguer catedrais; a base deve ser sólida, mas a estrutura deve tocar o céu da inovação.</p>
+                <h2 class="text-4xl mb-8 text-verde">Software Architecture & Art</h2>
+                <div class="space-y-6 text-gray-700 leading-relaxed">
+                    <p><strong>System Architect:</strong> Building software is like erecting skyscrapers; the foundation must be immutable, while the structure reaches for innovation.</p>
+                    <p><strong>Creative Vision:</strong> As a visual artist, I believe interface and logic must achieve a perfect "Golden Ratio." Code is art; execution is everything.</p>
                 </div>
             </div>
             <div class="flex justify-center">
-                <div class="gold-border-anim w-72 h-72">
-                    <div class="bg-white w-full h-full rounded-md flex items-center justify-center p-4">
-                        <span class="serif text-ouro text-xl text-center">IArtium Engineering Protocol</span>
+                <div class="gold-border-anim w-72 h-48">
+                    <div class="bg-white w-full h-full rounded flex items-center justify-center p-6 text-center">
+                        <span class="serif text-gold text-lg italic">Engineering for the Global Financial Elite</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="software" class="py-20 bg-white px-6">
-        <div class="max-w-5xl mx-auto border-l-4 border-gold pl-8">
-            <h2 class="text-4xl mb-4 text-verde uppercase tracking-tighter">Desenvolvimento Web</h2>
-            <p class="mb-6 italic">Soluções Full-Stack: Transformando designs em infraestruturas interativas.</p>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-6 bg-perola rounded-xl">
-                    <h3 class="font-bold mb-2">Front-End</h3>
-                    <p class="text-sm">Foco visual, layout e interatividade. O que o mundo vê.</p>
-                </div>
-                <div class="p-6 bg-perola rounded-xl">
-                    <h3 class="font-bold mb-2">Back-End</h3>
-                    <p class="text-sm">Lógica, banco de dados e servidores. O coração oculto.</p>
-                </div>
-                <div class="p-6 bg-perola rounded-xl border-2 border-ouro/20">
-                    <h3 class="font-bold mb-2">Sovereign Control</h3>
-                    <p class="text-sm">Código limpo, responsividade e segurança máxima.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="apps" class="py-20 section-bg-png bg-[#DFE7E2] px-6">
-        <div class="max-w-5xl mx-auto space-y-20">
-            <div class="text-right">
-                <h2 class="text-4xl mb-4 text-verde">Mobile & Software Engineering</h2>
-                <p class="max-w-2xl ml-auto">Projetamos ecossistemas em <strong>Java Nativo</strong>, Kotlin e PWA. Nossos aplicativos não são apenas ferramentas, são extensões da capacidade humana.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-10 bg-white/40 p-10 rounded-3xl backdrop-blur-sm">
-                <div>
-                    <h3 class="text-2xl mb-4 text-ouro">01. Financial Infrastructure</h3>
-                    <p class="text-sm mb-4">Desenvolvemos nós geográficos independentes (Nodes) em jurisdições estratégicas (NY/CH/BR).</p>
-                    <ul class="text-xs font-mono space-y-2 text-verde">
-                        <li>> MULTI-NODE DEPLOYMENT</li>
-                        <li>> QUANTUM-RESISTANT ENCRYPTION</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-2xl mb-4 text-ouro">02. Enterprise Software</h3>
-                    <p class="text-sm mb-4">Engenharia nativa sem dependência de terceiros. Alta performance para sistemas globais.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="esg" class="py-20 bg-white px-6">
+    <section id="sovereignty" class="py-24 bg-white px-6 border-y border-gold/20">
         <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl text-verde mb-4">ESG & Impacto Social</h2>
-                <p class="serif text-xl">Rádio Brasil Artes (RBA)</p>
-                <a href="https://iartium.com/rba" class="text-ouro underline text-sm tracking-widest">AGENDA 2030 ALIGNED</a>
-            </div>
-
-            <div id="historia" class="mt-32 flex flex-col items-center">
-                <div class="gold-border-anim w-[314px] h-[px] mb-6">
-                    <div class="bg-white w-full h-full flex items-center justify-center">
-                        <img src="paulo-salomao-ceo-iartium.png" alt="CEO" class="max-h-full">
-                    </div>
+            <h2 class="text-verde text-sm font-bold tracking-[0.3em] uppercase mb-12 text-center">Core Capabilities</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="border-l-2 border-gold/30 pl-6">
+                    <h3 class="font-bold text-verde mb-4">Financial Nodes</h3>
+                    <p class="text-sm text-gray-500">Deploying independent geographic nodes for private banking and institutional sovereignty.</p>
                 </div>
-                <h3 class="text-2xl font-bold">Paulo Salomão</h3>
-                <p class="text-xs uppercase tracking-widest text-ouro mb-6">CEO & Global Architect</p>
-                <div class="max-w-2xl text-center text-gray-600 leading-relaxed">
-                    <p>Liderando a intersecção entre alta tecnologia e soberania institucional através da IArtium. Especialista em infraestrutura crítica e desenvolvimento de sistemas financeiros independentes.</p>
+                <div class="border-l-2 border-gold/30 pl-6">
+                    <h3 class="font-bold text-verde mb-4">Native Systems</h3>
+                    <p class="text-sm text-gray-500">High-performance Native Java (Android) and PWA engines designed for critical scale.</p>
                 </div>
-                <a href="https://www.linkedin.com/in/paulo-iartium/" class="mt-6 text-verde hover:text-ouro">LinkedIn Profile</a>
+                <div class="border-l-2 border-gold/30 pl-6">
+                    <h3 class="font-bold text-verde mb-4">Quantum Security</h3>
+                    <p class="text-sm text-gray-500">Encryption protocols focused on asset protection and institutional data custody.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-[#026304] text-white py-16 px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-sm">
+    <footer class="bg-[#026304] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 text-[11px] tracking-wider uppercase">
             <div>
-                <p class="serif text-2xl mb-4">© 2026 PAULO SALOMÃO</p>
-                <p class="opacity-60">Todos os Direitos Reservados</p>
+                <p class="serif text-2xl normal-case mb-4">© 2026 PAULO SALOMÃO</p>
+                <p class="opacity-50">Sovereign Tech & Digital Assets</p>
             </div>
-            <div class="space-y-2">
-                <p class="font-bold text-ouro mb-2 uppercase">Global Assets</p>
-                <a href="https://iartium.com/global/" class="block opacity-80 hover:opacity-100">Global Management</a>
-                <a href="https://iartium.com/ny/" class="block opacity-80 hover:opacity-100">Bank New York HPS</a>
-                <a href="https://iartium.com/ch/" class="block opacity-80 hover:opacity-100">Swiss HPS Bank</a>
-                <a href="https://iartium.com/br/" class="block opacity-80 hover:opacity-100">Bank Brasil HPS</a>
+            <div class="flex flex-col space-y-3">
+                <span class="text-gold font-bold mb-2">Portfolio</span>
+                <a href="https://iartium.com/ny/" class="hover:text-gold">Bank New York HPS</a>
+                <a href="https://iartium.com/ch/" class="hover:text-gold">Swiss HPS Bank</a>
             </div>
-            <div class="space-y-2">
-                <p class="font-bold text-ouro mb-2 uppercase">Impacto & Engenharia</p>
-                <a href="https://iartium.com/rba" class="block opacity-80 hover:opacity-100">ESG - Rádio Brasil Artes</a>
-                <a href="https://www.youtube.com/watch?v=U2-FTt4dl0k&t=6s" class="block opacity-80 hover:opacity-100">RBA Engineering (Video)</a>
-                <a href="https://iartium.com/briefing.html" class="block opacity-80 hover:opacity-100">Briefing Estratégico</a>
+            <div class="flex flex-col space-y-3">
+                <span class="text-gold font-bold mb-2">Social Impact</span>
+                <a href="https://iartium.com/rba" class="hover:text-gold">ESG - Rádio Brasil Artes</a>
+                <a href="https://www.linkedin.com/in/paulo-iartium/" class="hover:text-gold">LinkedIn Profile</a>
             </div>
         </div>
     </footer>
